@@ -1,6 +1,6 @@
 .creator-page {
     display: flex;
-    background-color: #282828;
+    background-color: #0b0b0b;
     justify-content: center;
   }
 
@@ -14,7 +14,7 @@
   margin: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  background-color: #282828;
+  background-color: #0b0b0b;
 }
 
 
@@ -26,7 +26,7 @@
     flex-direction: column;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #282828;
+    background-color: #0b0b0b;
     margin-bottom: 2rem;
 }
 
@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
     gap: 16px;
-    background-color: #292929;
+    background-color: #0b0b0b;
 }
 
 .creators > *:nth-last-child(1):nth-child(odd) {

@@ -1,0 +1,17 @@
+.profile-page {
+    display: flex;
+    background-color: #282828;
+    justify-content: center;
+  }
+
+.profile-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: #282828;
+}
