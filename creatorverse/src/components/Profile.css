@@ -1,37 +1,46 @@
   .profile-card {
     display: flex;
     flex-direction: row;
-    background-color: #1a1a1a;
-    border-radius: 8px;
+    background-color: #101010;
     overflow: hidden;
     color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 60dvh;
+    width: 100%;
   }
   
   .profile-image {
-    width: 300px;
-    height: 100%;
+    min-width: 400px;
+    height: 70%;
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
     border-right: 2px solid #333;
+    margin: 1.6rem;
   }
   
   .profile-content {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   
   .profile-header h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 0;
     color: #5ea4eb;
+    text-align: left;
   }
   
   .profile-header p {
     font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 1rem 0;
+    align-self: self-start;
+    text-align: left;
+    padding-right: 20%;
   }
   
   .profile-socials {
@@ -52,7 +61,7 @@
   }
   
   .social-icon span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
   }
   

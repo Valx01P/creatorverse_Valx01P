@@ -12,12 +12,12 @@ const Profile = ({ name, description, image, socialMedia }) => {
     return Object.keys(socialMedia).map((platform, index) => (
       <div key={index} className="social-icon">
         {/* eslint-disable-next-line react/prop-types */}
-        <a href={`https://www.${platform}.com/${socialMedia[platform].slice(1)}`} target="_blank" rel="noopener noreferrer">
+        <a href={`https://www.${platform}.com/${socialMedia[platform]}`} target="_blank" rel="noopener noreferrer">
           <svg className={icons[platform].class} xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 576 512">
             <path fill="#ffffff" d={icons[platform].path} />
           </svg>
         </a>
-        <span>{socialMedia[platform]}</span>
+        <span><strong>@{socialMedia[platform]}</strong></span>
       </div>
     ));
   };
