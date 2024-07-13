@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 // import ProfilePage from './pages/ProfilePage'
 // import HomeFeed from './pages/HomeFeed'
 import UploadFormPage from './pages/UploadFormPage'
+// import EditFormPage from './pages/EditFormPage'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       {/* <HomeFeed/> */}
       {/* <ProfilePage/> */}
       <UploadFormPage/>
+      {/* <EditFormPage/> */}
     </div>
     
   )

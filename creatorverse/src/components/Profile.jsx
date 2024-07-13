@@ -39,31 +39,3 @@ const Profile = ({ name, description, image, socialMedia }) => {
 };
 
 export default Profile;
-
-
-
-// import './ProfilePage.css';
-
-// // eslint-disable-next-line react/prop-types
-// const Profile = ({ name, description, image, socialMedia }) => {
-//   return (
-//     <div className="profile-card">
-//         <div>
-//             {/* image */}
-//         </div>
-//         <div>
-//             <div>
-
-//             </div>
-//             <div>
-
-//             </div>
-//             <div>
-
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Profile
