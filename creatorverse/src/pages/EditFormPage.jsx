@@ -1,6 +1,13 @@
 import './EditFormPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const EditFormPage = () => {
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+      navigate(-1);
+    };
+
   const handleDelete = (event) => {
     event.preventDefault();
     // Logic to open the modal
@@ -18,11 +25,11 @@ const EditFormPage = () => {
   };
 
   return (
-    <div className="edit-form-page">
-        <div className="back-container">
-            <button className="back-button">Back</button>
+    <div className="e-form-page">
+        <div className="b-container">
+            <button className="b-button" onClick={handleBack}>Back</button>
         </div>
-        <form className="edit-form">
+        <form className="e-form">
             <label className="name">
                 Name:
                 <input type="text" name="name" />
@@ -56,9 +63,9 @@ const EditFormPage = () => {
                 <p><em>The creator&apos;s Instagram handle (without the @)</em></p>
                 <input type="text" name="instagram" />
             </label>
-            <div className="form-buttons">
-              <button className="submit-button" type="submit">Submit</button>
-              <button className="delete-button" onClick={handleDelete}>Delete</button>
+            <div className="f-buttons">
+              <button className="s-button" type="submit">Submit</button>
+              <button className="d-button" onClick={handleDelete}>Delete</button>
             </div>
         </form>
         <div className="overlay" onClick={closeModal}></div>

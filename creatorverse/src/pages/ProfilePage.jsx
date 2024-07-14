@@ -98,13 +98,13 @@ const ProfilePage = () => {
 
       {showModal && (
         <>
-          <div className="modal-background" onClick={closeModal}></div>
-          <div className="modal">
-            <button className="close-modal" onClick={closeModal}>X</button>
+          <div className="m-background" onClick={closeModal}></div>
+          <div className="m">
+            <button className="c-modal" onClick={closeModal}>X</button>
             <p>Are you sure you want to delete this creator?</p>
-            <div className="modal-buttons">
-              <button className="confirm-button" onClick={confirmDelete}>Yes, I&apos;m sure</button>
-              <button className="cancel-button" onClick={closeModal}>Never mind</button>
+            <div className="m-buttons">
+              <button className="con-button" onClick={confirmDelete}>Yes, I&apos;m sure</button>
+              <button className="can-button" onClick={closeModal}>Never mind</button>
             </div>
           </div>
         </>

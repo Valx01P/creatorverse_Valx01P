@@ -1,10 +1,17 @@
 import './UploadFormPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const UploadFormPage = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="upload-form-page">
         <div className="back-container">
-            <button className="back-button">Back</button>
+            <button className="back-button" onClick={handleBack}>Back</button>
         </div>
         <form className="upload-form">
             <label className="name">

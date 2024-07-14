@@ -1,4 +1,4 @@
-.back-button {
+.b-button {
     background-color: #5fe29cd3;
     color: #ffffff;
     border: none;
@@ -11,11 +11,11 @@
     transition: background-color 0.3s;
 }
 
-.back-button:hover {
+.b-button:hover {
     background-color: #2b925b;
 }
 
-.back-container {
+.b-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -26,7 +26,7 @@
     justify-content: flex-start;
 }
 
-.edit-form-page {
+.e-form-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@
     padding: 4rem;
 }
 
-.edit-form {
+.e-form {
     background-color: #282828;
     padding: 2rem;
     border-radius: 8px;
@@ -47,12 +47,12 @@
     max-width: 600px;
 }
 
-.edit-form label {
+.e-form label {
     display: block;
     margin-bottom: 1rem;
 }
 
-.edit-form input[type="text"], .edit-form textarea {
+.e-form input[type="text"], .e-form textarea {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
@@ -60,26 +60,27 @@
     border-radius: 4px;
 }
 
-.edit-form textarea {
+.e-form textarea {
     height: 100px;
     resize: vertical;
 }
 
-.edit-form p {
+.e-form p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
     color: #ccc;
 }
 
-.form-buttons {
+.f-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
     flex-direction: column;
+    gap: 1rem;
 }
 
-.submit-button {
+.s-button {
     background-color: #3e94eb;
     color: #fff;
     border: none;
@@ -93,7 +94,7 @@
     text-align: center;
 }
 
-.delete-button {
+.d-button {
     background-color: #3e94eb;
     color: #fff;
     border: none;
@@ -107,15 +108,15 @@
     text-align: center;
 }
 
-.submit-button:hover, .delete-button:hover {
+.s-button:hover, .d-button:hover {
     background-color: #2068bb;
 }
 
-.delete-button {
+.d-button {
     background-color: #e94e3e;
 }
 
-.delete-button:hover {
+.d-button:hover {
     background-color: #bb3629;
 }
 
