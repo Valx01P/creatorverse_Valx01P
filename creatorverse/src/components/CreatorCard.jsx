@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import './CreatorCard.css';
 
 // eslint-disable-next-line react/prop-types
-const CreatorCard = ({ name, description, image, socialMedia }) => {
+const CreatorCard = ({ id, name, description, image, socialMedia }) => {
   const renderSocialIcons = () => {
     const icons = {
       youtube: { class: 'youtube-icon', path: 'M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z' },
@@ -20,30 +21,31 @@ const CreatorCard = ({ name, description, image, socialMedia }) => {
 
   return (
     <div className="creator-card">
-        <div className="card-content">
-
-          <div className='top'>
-            <div className="card-top">
-              <h3>{name}</h3>
-              <div className="card-options">
+      <div className="card-content">
+        <div className='top'>
+          <div className="card-top">
+            <h3>{name}</h3>
+            <div className="card-options">
+              <Link to={`/profile/${id}`}>
                 <svg className="info-icon" xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 512 512"><path fill="#ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+              </Link>
+              <Link to={`/edit/${id}`}>
                 <svg className="pencil-icon" xmlns="http://www.w3.org/2000/svg" width={28} height={28} viewBox="0 0 512 512"><path fill="#ffffff" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
-              </div>
-            </div>
-            <div className="card-middle">
-              <div className="card-socials">
-                {renderSocialIcons()}
-              </div>
-            </div>
-            <div className="card-bottom">
-              <p>{description}</p>
+              </Link>
             </div>
           </div>
-
-          <div className="card-background-image" style={{ backgroundImage: `url(${image})` }}></div>
-        
+          <div className="card-middle">
+            <div className="card-socials">
+              {renderSocialIcons()}
+            </div>
+          </div>
+          <div className="card-bottom">
+            <p>{description}</p>
+          </div>
         </div>
+        <div className="card-background-image" style={{ backgroundImage: `url(${image})` }}></div>
       </div>
+    </div>
   );
 };
 
