@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,8 +8,8 @@ const Hero = () => {
         <h1>Creatorverse</h1>
         <p>Find and share your favorite creators around the world!</p>
         <div className="buttons">
-          <a href="/creators">VIEW ALL CREATORS</a>
-          <a href="/upload">ADD A CREATOR</a>
+          <Link to="/creators">VIEW ALL CREATORS</Link>
+          <Link to="/upload">ADD A CREATOR</Link>
         </div>
       </div>
     </div>
