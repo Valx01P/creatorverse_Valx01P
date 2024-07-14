@@ -1,68 +1,46 @@
+import { useEffect, useState } from 'react';
 import './HomeFeed.css';
 import CreatorCard from '../components/CreatorCard';
+import { getAllCreators } from '../supabaseClient';
 
-const creators = [
-    {
-      id: 1,
-      name: 'Alexandra Andersson',
-      description: 'With my years of living a plant based lifestyle and my knowledge from the Plant Based Nutrition course from eCornell, I feel confident to inspire you to eat more...',
-      image: 'https://i1.sndcdn.com/artworks-000511321446-3lwj3c-t500x500.jpg',
-      socialMedia: { youtube: 'thekoreanvegan', twitter: 'thekoreanvegan' , instagram: 'thekoreanvegan'}
-    },
-    {
-      id: 2,
-      name: 'Sarah\'s Vegan Kitchen',
-      description: 'I went vegan in late 2015, originally to improve my health (although nowadays I\'m primarily vegan for ethical and environmental reasons). Around that same time, I...',
-      image: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Alia_Shelesh_YouTube_shorts_screenshot.jpg/220px-Alia_Shelesh_YouTube_shorts_screenshot.jpg',
-      socialMedia: { youtube: 'thekoreanvegan', twitter: 'thekoreanvegan' , instagram: 'thekoreanvegan'}
-    },
-    {
-      id: 3,
-      name: 'Alexandra Andersson',
-      description: 'With my years of living a plant based lifestyle and my knowledge from the Plant Based Nutrition course from eCornell, I feel confident to inspire you to eat more...',
-      image: 'https://preview.redd.it/sv3rige-goatis-raw-meat-eater-v0-6dll2z8z6yub1.png?width=1080&crop=smart&auto=webp&s=079e6c589f72a3dd27f465708923a22b94afb47a',
-      socialMedia: { youtube: 'thekoreanvegan', instagram: 'thekoreanvegan'}
-    },
-    {
-      id: 4,
-      name: 'Sarah\'s Vegan Kitchen',
-      description: 'I went vegan in late 2015, originally to improve my health (although nowadays I\'m primarily vegan for ethical and environmental reasons). Around that same time, I...',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQ0neKGVPlAw5ov-gR3yTx77kIwK_V4TKVQ&s',
-      socialMedia: { youtube: 'thekoreanvegan', instagram: 'thekoreanvegan'}
-    },
-    {
-      id: 5,
-      name: 'Alexandra Andersson',
-      description: 'With my years of living a plant based lifestyle and my knowledge from the Plant Based Nutrition course from eCornell, I feel confident to inspire you to eat more...',
-      image: 'https://preview.redd.it/do-you-guys-remember-that-streamer-xqc-from-back-in-the-day-v0-s5aektlg1fub1.jpg?width=640&crop=smart&auto=webp&s=f998e9c5baf40c077098bb5c140d85fbd6931ab8',
-      socialMedia: { youtube: 'thekoreanvegan', instagram: 'thekoreanvegan'}
-    }
-  ];
+const HomeFeed = () => {
+  const [creators, setCreators] = useState([]);
 
-  const HomeFeed = () => {
-    return (
-      <div className="creator-page">
-        <div className="creator-feed">
-          <div className="feed-text">
-            <h1>Explore Creators</h1>
-            <p>Can&apos;t find your favorite creator? Add them!</p>
-          </div>
-          <div className="creators">
-            {creators.map((creator) => (
-              <CreatorCard
-                key={creator.id}
-                id={creator.id}
-                name={creator.name}
-                description={creator.description}
-                image={creator.image}
-                socialMedia={creator.socialMedia}
-              />
-            ))}
-          </div>
+  useEffect(() => {
+    const fetchCreators = async () => {
+      try {
+        const data = await getAllCreators();
+        setCreators(data);
+      } catch (error) {
+        console.error('Error fetching creators:', error);
+      }
+    };
+
+    fetchCreators();
+  }, []);
+
+  return (
+    <div className="creator-page">
+      <div className="creator-feed">
+        <div className="feed-text">
+          <h1>Explore Creators</h1>
+          <p>Can&apos;t find your favorite creator? Add them!</p>
+        </div>
+        <div className="creators">
+          {creators.map((creator) => (
+            <CreatorCard
+              key={creator.id}
+              id={creator.id}
+              name={creator.name}
+              description={creator.description}
+              image={creator.image}
+              socialMedia={creator.socialMedia}
+            />
+          ))}
         </div>
       </div>
-    );
-  };
-  
-  export default HomeFeed;
-  
+    </div>
+  );
+};
+
+export default HomeFeed;
