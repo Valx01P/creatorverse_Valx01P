@@ -37,14 +37,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-https://imgur.com/a/r644q2I
-https://i.imgur.com/skByLt9.gif
+https://imgur.com/a/kKq4Dgk
+https://i.imgur.com/8dIYxfC.mp4
 
-![Creatorverse GIF](https://i.imgur.com/skByLt9.gif)
+![Creatorverse MP4](https://i.imgur.com/8dIYxfC.mp4)
 
-<img src='https://i.imgur.com/skByLt9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/8dIYxfC.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with Lice Cap for Windows
+MP4 created with Microsoft Clipchamp for Windows
 
 ## Notes
 
